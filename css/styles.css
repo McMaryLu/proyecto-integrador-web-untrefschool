@@ -62,14 +62,6 @@ h2 {
     text-align: center;
     color: var(--blue);
 }
-#QuienesSomos  {
-    grid-template-columns: repeat(4, 1fr);    
-    grid-template-rows: repeat(2, 1fr);
-    
-}
-.img1 {
-    grid-area: 2;
-}
 
   /* Estilos para el pie de página */
 footer {
