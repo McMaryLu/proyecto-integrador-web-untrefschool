@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
 
 :root {
     --blue:#00425A;
@@ -25,15 +30,20 @@ nav ul {
 }
 
 nav ul li a {
+    font-family: "Belanosima", sans-serif;
+    font-size: auto;
     color: var(--light);
     text-decoration: none;
+
 }
+
   /*Estilos para la portada */
 .hero {
     position: relative;
     width: 100%;
     height: 100%; 
     overflow: hidden;
+    margin-bottom: 10px;
 }
 .hero {
     background-color: var(--dark);
@@ -42,10 +52,10 @@ nav ul li a {
     background-size: cover;
     
 }
-/* Estilos para el texto del H1 */    
+/* Estilos para el texto del h1 */    
 h1 {
     font-family: "PoppinsBold", sans-serif;
-    font-size: 8rem;
+    font-size: 8vw;
     color: var(--blue);
     opacity: 70%;
     text-align: center;
@@ -53,16 +63,135 @@ h1 {
     position: relative;
     z-index: 1;
 }
-/*Estilos para el main*/
-main {
-    display: grid;
-}
-h2 {
-    font-size: 3rem;
+
+h2{
+    font-family: "Belanosima", sans-serif;
+    color: var(--dark);
     text-align: center;
-    color: var(--blue);
+}
+h3 {
+    font-family: "Belanosima", sans-serif;
+    color: var(--dark);
+    text-align: center;
+}
+p {
+    font-family: "Belanosima", sans-serif;
+    color: var(--dark);
+    text-align: justify;
+    margin: 5px;
 }
 
+/*Estilos para el main*/
+.container {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    row-gap: 6px;
+}
+.quienes {
+    display: inline-flex;
+    align-content: space-between;
+}
+.foto1, .foto2 {
+    position: relative;
+    max-width: 40%;
+    height: auto;
+}
+.porque {
+    background-color: var(--blue2);
+    display: inline-flex;
+    align-content: space-between;
+    flex-direction: row-reverse;
+}
+.ultimas {
+    display: flex;
+    justify-content: space-between; 
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.propuesta {
+    flex-direction: row;
+}
+.card-container {
+    display: flex;
+    justify-content: space-between; 
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.card-exacta {
+    border-radius: 5%;
+/*     height: 60%;
+    width: 22%; */
+    background-color:var(--dark);
+    margin-top: 8px;
+    position: relative;
+}
+.card-deporte {
+    border-radius: 5%;
+/*     height: 60%;
+    width: 22%; */
+    background-color:var(--green);
+    margin-top: 8px;
+    position: relative;
+    gap: 10px;
+
+}
+.card-arte {
+    border-radius: 5%;
+/*     height: 60%;
+    width: 22%; */
+    background-color:var(--orange);
+    margin-top: 8px;
+    position: relative;
+    gap: 10px;
+}
+.card-letras {
+    border-radius: 5%;
+/*     height: 60%;
+    width: 22%; */
+    background-color:var(--blue);
+    margin-top: 8px;
+    position: relative;
+    gap: 10px;
+
+}
+
+.h3-tarjeta {
+    padding-top: 20%;
+    color: var(--light);
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+.card-top-escuadra {
+    background-image: url(..//assets/img/escuadra.jpg);
+    background-size: cover;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+    height: 200px;
+}
+.card-top-deporte {
+    background-image: url(..//assets/img/canasta-basquet.jpg);
+    background-size: cover;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+    height: 200px;
+}
+.card-top-arte {
+    background-image: url(..//assets/img/arte.jpg);
+    background-size: cover;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+    height: 200px;
+}
+.card-top-letras {
+    background-image: url(..//assets/img/letras.jpg);
+    background-size: cover;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+    height: 200px;
+}
   /* Estilos para el pie de página */
 footer {
     background-color: var(--blue);
@@ -75,32 +204,41 @@ footer {
 
 footer .redes-sociales {
     display: flex;
-    color: var(--light);
+    
 }
 
 footer .redes-sociales a {
     margin-right: 10px;
-    transform: var(--light);
+
 }
 
-footer .nombre-instituto {
+footer .nombre-instituto .final {
     text-align: center;
     color: var(--light);
 }
 
-footer .contactos {
+footer .contacto .tel .mail {
     text-align: right;
     color: var(--light);
 }
 
-  /* Estilos generales */
-body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
+/* Estilos smartphones */
+@media (max-width: 320px) {
+    .card-arte, .card-letras, .card-deporte, .card-exacta {
+        max-width: 100%;
+        height: auto;
+    }
+    .nav ul li a {
+        font-size: 2rem;
+    }
+    }
 }
 
-h1, h2, h3 {
-    margin: 0;
-}
+  /* Estilos para tablets */
+@media  (max-width: 768px) {
 
+}
+}
+@media  (max-width: 769px) {
+  
+}
