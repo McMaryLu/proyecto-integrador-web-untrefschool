@@ -31,12 +31,15 @@ nav ul {
 
 nav ul li a {
     font-family: "Belanosima", sans-serif;
-    font-size: auto;
+    font-size: 1.5rem;
     color: var(--light);
     text-decoration: none;
 
 }
-
+section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
   /*Estilos para la portada */
 .hero {
     position: relative;
@@ -78,7 +81,7 @@ p {
     font-family: "Belanosima", sans-serif;
     color: var(--dark);
     text-align: justify;
-    margin: 5px;
+    margin: 15px;
 }
 
 /*Estilos para el main*/
@@ -88,48 +91,72 @@ p {
     flex-direction: column;
     row-gap: 6px;
 }
-.quienes {
+#quienes {
     display: inline-flex;
     align-content: space-between;
 }
+
+
 .foto1, .foto2 {
     position: relative;
-    max-width: 40%;
+    align-items: flex-start;
+    width: 40%;
     height: auto;
+    border-radius: 30px;
+    border: outset;
 }
-.porque {
-    background-color: var(--blue2);
+
+#porque {
     display: inline-flex;
     align-content: space-between;
     flex-direction: row-reverse;
 }
-.ultimas {
+#ultimas {
     display: flex;
     justify-content: space-between; 
     row-gap: 10px;
     column-gap: 10px;
+    margin-top: 15px;
 }
-.propuesta {
+.tit  {
+   /*  display: block; */
+    display: inline;
+    position: relative;
+    flex-direction: column;
+    align-content: center;
+}
+
+/*     flex-direction: column;
+    align-items: center; */
+}
+.n1, .n2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.noticias {
+    display: inline-flex;
+    position: relative;
+    align-content: space-between;
+}
+#propuesta {
     flex-direction: row;
 }
 .card-container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-around; 
     row-gap: 10px;
     column-gap: 10px;
+
 }
 .card-exacta {
     border-radius: 5%;
-/*     height: 60%;
-    width: 22%; */
     background-color:var(--dark);
     margin-top: 8px;
     position: relative;
 }
 .card-deporte {
     border-radius: 5%;
-/*     height: 60%;
-    width: 22%; */
     background-color:var(--green);
     margin-top: 8px;
     position: relative;
@@ -138,8 +165,6 @@ p {
 }
 .card-arte {
     border-radius: 5%;
-/*     height: 60%;
-    width: 22%; */
     background-color:var(--orange);
     margin-top: 8px;
     position: relative;
@@ -147,8 +172,6 @@ p {
 }
 .card-letras {
     border-radius: 5%;
-/*     height: 60%;
-    width: 22%; */
     background-color:var(--blue);
     margin-top: 8px;
     position: relative;
@@ -157,7 +180,7 @@ p {
 }
 
 .h3-tarjeta {
-    padding-top: 20%;
+    padding-top: 5%;
     color: var(--light);
     font-size: 1rem;
     text-align: center;
@@ -192,9 +215,10 @@ p {
     border-top-right-radius: 8%;
     height: 200px;
 }
+
   /* Estilos para el pie de página */
 footer {
-    background-color: var(--blue);
+    background-color: var(--blue2);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -217,28 +241,81 @@ footer .nombre-instituto .final {
     color: var(--light);
 }
 
-footer .contacto .tel .mail {
-    text-align: right;
-    color: var(--light);
-}
-
-/* Estilos smartphones */
+    /*medias queries*/
 @media (max-width: 320px) {
-    .card-arte, .card-letras, .card-deporte, .card-exacta {
+    body {
+        width: 100%;
+        margin: 0;
+      }
+    nav ul li a {
+        font-size: x-small;
+    }
+    .foto1, .foto2 {
+        max-width: 100%; 
+        height: auto; 
+        display: block; 
+        margin-bottom: 10px;
+    }
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    #quienes, #porque {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        flex-basis: 100%;
         max-width: 100%;
-        height: auto;
     }
-    .nav ul li a {
-        font-size: 2rem;
+    #ultimas {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
     }
+    .noticias {
+        flex-direction: column;
+    }
+    footer {
+        flex-direction: column;
     }
 }
 
-  /* Estilos para tablets */
 @media  (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #quienes, #porque {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .foto1, .foto2 {
+        max-width: 100%; 
+        height: auto; 
+        display: block; 
+        margin-bottom: 10px;
+    }
+    .h3-tarjeta{
+        padding: 0%;
+    }
+    .card {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    #ultimas {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .noticias {
+        flex-direction: column;
+    }
+}
+@media (min-width: 768px) {
 
 }
-}
-@media  (max-width: 769px) {
-  
+    
 }
